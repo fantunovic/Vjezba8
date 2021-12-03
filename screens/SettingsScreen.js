@@ -30,7 +30,7 @@ export function SettingsScreen({ route, navigation }) {
   }
   return (
     <View style={styles.screen}>
-      <ScrollView>
+     
       
 
       <View>
@@ -41,6 +41,7 @@ export function SettingsScreen({ route, navigation }) {
             data={data}
             keyExtractor={({ id }, index) => id}
             renderItem={({ item }) => (
+              <ScrollView>
               <View style={styles.itemWraper}>
                 <View style={styles.itemImage}>
                   <Image style={styles.image} source={{uri: `${item.avatar}`}}/>
@@ -51,12 +52,13 @@ export function SettingsScreen({ route, navigation }) {
                   <Text>{item.email}</Text>
                 </View>
               </View>
+              </ScrollView>
             )} />
         )}
 
       </View>
 
-</ScrollView>
+
     </View>
   );
 }

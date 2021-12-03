@@ -31,7 +31,7 @@ export function HomeScreen({ route, navigation }) {
   return (
     
     <View style={styles.screen}>
-    <ScrollView>
+    
 
 <View>
         {isloading ? (
@@ -41,6 +41,7 @@ export function HomeScreen({ route, navigation }) {
             data={data}
             keyExtractor={({ id }, index) => id}
             renderItem={({ item }) => (
+              <ScrollView>
               <View style={styles.itemWraper}>
                 <View style={styles.itemImage}>
                   <Image style={styles.image} source={{uri:`${item.image}`}}/>
@@ -52,11 +53,12 @@ export function HomeScreen({ route, navigation }) {
                   <Text>Broj recenzija: {item.rating.reviews}</Text>
                 </View>
               </View>
+              </ScrollView>
             )} />
         )}
 
       </View>
-      </ScrollView>
+      
     </View>
    
   );

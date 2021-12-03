@@ -1,7 +1,7 @@
 {
   "expo": {
    "name": "Zadaca8",
-   "icon": "../assets/adaptive-icon.png",
+   "icon": "assets/adaptive-icon.png",
    "version": "1.0.0",
    "slug": "your-app-slug",
    "ios": {
